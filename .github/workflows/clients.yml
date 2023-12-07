@@ -1,0 +1,91 @@
+# Generate documentation and associated files
+# If file gets unweildy with just one job, could refactor to use outputs:
+# https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs
+
+# This name is referenced by gh-pages.yml workflow. Update there if this changes.
+name: Clients
+on:
+  workflow_run: 
+    branches:
+      - main
+    workflows: [Validate]
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      save_output:
+        type: boolean
+        description: 'Run the deploy-to-api-clients branch step'
+        required: false
+        default: false
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
+
+jobs:
+  make-clients:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    env:
+      POSTGRES_PASSWORD: "galv"
+      DJANGO_SECRET_KEY: "long-and-insecure-key-12345"
+    steps:
+      - uses: actions/checkout@v3
+
+      # Enable tmate debugging of manually-triggered workflows if the input option was provided
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+
+      - name: Make clients directory
+        run: |
+          mkdir clients
+        
+      - name: Create API client - python
+        run: |
+          echo "{\"lang\": \"python\", \"type\": \"CLIENT\", \"codegenVersion\": \"V3\", \"spec\": $(cat galv-spec.json)}" > payload.json
+          curl -d @payload.json --output clients/galv-client-python.zip -H "Content-Type: application/json" https://generator3.swagger.io/api/generate
+          # Check size
+          if [ ! -s clients/galv-client-python.zip ]; then
+            echo "Downloaded python client zip file is zero bytes"
+            exit 1
+          fi
+          # Check we can unzip
+          unzip -t clients/galv-client-python.zip
+
+      - name: Create API client - typescript-axios
+        run: |
+          echo "{\"lang\": \"python\", \"type\": \"CLIENT\", \"codegenVersion\": \"V3\", \"spec\": $(cat galv-spec.json)}" > payload.json
+          curl -d @payload.json --output clients/galv-client-typescript-axios.zip -H "Content-Type: application/json" https://generator3.swagger.io/api/generate
+          # Check size
+          if [ ! -s clients/galv-client-typescript-axios.zip ]; then
+            echo "Downloaded typescript-axios client zip file is zero bytes"
+            exit 1
+          fi
+          # Check we can unzip
+          unzip -t clients/galv-client-typescript-axios.zip
+
+      - name: Push to api-clients branch
+        if: (github.ref_name == 'main' && github.event_name == 'workflow_run') || inputs.save_output
+        run: |
+          git worktree add api-clients
+          git config user.name "Deploy from CI"
+          git config user.email ""
+          cd api-clients
+          # Delete the ref to avoid keeping history.
+          git update-ref -d refs/heads/api-clients
+          rm -rf *
+          mv ../clients .
+          mv ../galv-spec.json .
+          mv ../LICENCE .
+          mv ../README.md .
+          git add .
+          git commit -m "Deploy $GITHUB_SHA to api-clients"
+          git push --set-upstream origin api-clients --force
+
+      - name: Explain skip
+        if: (github.ref_name != 'main' || github.event_name != 'workflow_run') && !inputs.save_output
+        run: |
+          echo "Skipping push to api-clients branch because ${{ github.ref_name }} != 'main' or ${{ github.event_name }} != 'workflow_run' and inputs.save_output is ${{ inputs.save_output }}"
