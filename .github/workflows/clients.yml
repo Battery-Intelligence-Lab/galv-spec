@@ -79,7 +79,7 @@ jobs:
           rm -rf *
           mv ../clients .
           mv ../galv-spec.json .
-          mv ../LICENSE .
+          mv ../LICENCE .
           mv ../README.md .
           git add .
           git commit -m "Deploy $GITHUB_SHA to api-clients"
