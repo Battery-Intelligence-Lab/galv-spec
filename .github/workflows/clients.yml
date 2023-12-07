@@ -10,7 +10,7 @@ on:
       - main
     workflows: [Validate]
     types:
-      -
+      - completed
   workflow_dispatch:
     inputs:
       save_output:
@@ -41,7 +41,7 @@ jobs:
         
       - name: Create API client - python
         run: |
-          echo "{\"lang\": \"python\", \"type\": \"CLIENT\", \"codegenVersion\": \"V3\", \"spec\": $(cat schema.json)}" > payload.json
+          echo "{\"lang\": \"python\", \"type\": \"CLIENT\", \"codegenVersion\": \"V3\", \"spec\": $(cat galv-spec.json)}" > payload.json
           curl -d @payload.json --output clients/galv-client-python.zip -H "Content-Type: application/json" https://generator3.swagger.io/api/generate
           # Check size
           if [ ! -s clients/galv-client-python.zip ]; then
@@ -53,7 +53,7 @@ jobs:
 
       - name: Create API client - typescript-axios
         run: |
-          echo "{\"lang\": \"python\", \"type\": \"CLIENT\", \"codegenVersion\": \"V3\", \"spec\": $(cat schema.json)}" > payload.json
+          echo "{\"lang\": \"python\", \"type\": \"CLIENT\", \"codegenVersion\": \"V3\", \"spec\": $(cat galv-spec.json)}" > payload.json
           curl -d @payload.json --output clients/galv-client-typescript-axios.zip -H "Content-Type: application/json" https://generator3.swagger.io/api/generate
           # Check size
           if [ ! -s clients/galv-client-typescript-axios.zip ]; then
@@ -63,7 +63,7 @@ jobs:
           # Check we can unzip
           unzip -t clients/galv-client-typescript-axios.zip
 
-      - name: Push to gh-pages branch
+      - name: Push to api-clients branch
         if: (github.ref_name == 'main' && github.event_name == 'push') || inputs.save_output
         run: |
           git worktree add api-clients
