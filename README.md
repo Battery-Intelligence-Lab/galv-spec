@@ -7,7 +7,7 @@ Galv is deployed with [Docker](https://docs.docker.com/) to support robust local
 An example frontend view is displayed below. 
 
 <p align="center">
-<img src="docs/source/img/galv_frontend_v1.png" width="900" />
+<img src="img/galv_frontend_v1.png" width="900" />
 </p>
 
 ## Features:
