@@ -195,17 +195,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CellFamily"
+                                "$ref": "#/components/schemas/CellFamilyRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/CellFamily"
+                                "$ref": "#/components/schemas/CellFamilyRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/CellFamily"
+                                "$ref": "#/components/schemas/CellFamilyRequest"
                             }
                         }
                     },
@@ -373,17 +373,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCellFamily"
+                                "$ref": "#/components/schemas/PatchedCellFamilyRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCellFamily"
+                                "$ref": "#/components/schemas/PatchedCellFamilyRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCellFamily"
+                                "$ref": "#/components/schemas/PatchedCellFamilyRequest"
                             }
                         }
                     }
@@ -809,17 +809,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Cell"
+                                "$ref": "#/components/schemas/CellRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Cell"
+                                "$ref": "#/components/schemas/CellRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/Cell"
+                                "$ref": "#/components/schemas/CellRequest"
                             }
                         }
                     },
@@ -965,17 +965,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCell"
+                                "$ref": "#/components/schemas/PatchedCellRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCell"
+                                "$ref": "#/components/schemas/PatchedCellRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCell"
+                                "$ref": "#/components/schemas/PatchedCellRequest"
                             }
                         }
                     }
@@ -1457,17 +1457,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CreateKnoxToken"
+                                "$ref": "#/components/schemas/CreateKnoxTokenRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/CreateKnoxToken"
+                                "$ref": "#/components/schemas/CreateKnoxTokenRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/CreateKnoxToken"
+                                "$ref": "#/components/schemas/CreateKnoxTokenRequest"
                             }
                         }
                     },
@@ -1497,6 +1497,8 @@
                                             "url": "http://localhost:8001/tokens/1/",
                                             "name": "Example Token",
                                             "token": "example_token_value",
+                                            "created": "2021-08-18T15:23:45.123456Z",
+                                            "expiry": "2023-08-18T15:23:45.123456Z",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -1588,6 +1590,7 @@
                                                         "Charge at 1 A until 4.1 V",
                                                         "Discharge at 1 C for 10 hours or until 3.3 V"
                                                     ],
+                                                    "team": "http://localhost:8001/teams/1/",
                                                     "permissions": {
                                                         "create": true,
                                                         "destroy": false,
@@ -1617,17 +1620,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CyclerTest"
+                                "$ref": "#/components/schemas/CyclerTestRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/CyclerTest"
+                                "$ref": "#/components/schemas/CyclerTestRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/CyclerTest"
+                                "$ref": "#/components/schemas/CyclerTestRequest"
                             }
                         }
                     },
@@ -1674,6 +1677,7 @@
                                                 "Charge at 1 A until 4.1 V",
                                                 "Discharge at 1 C for 10 hours or until 3.3 V"
                                             ],
+                                            "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": true,
                                                 "destroy": false,
@@ -1752,6 +1756,7 @@
                                                 "Charge at 1 A until 4.1 V",
                                                 "Discharge at 1 C for 10 hours or until 3.3 V"
                                             ],
+                                            "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": true,
                                                 "destroy": false,
@@ -1791,17 +1796,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCyclerTest"
+                                "$ref": "#/components/schemas/PatchedCyclerTestRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCyclerTest"
+                                "$ref": "#/components/schemas/PatchedCyclerTestRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedCyclerTest"
+                                "$ref": "#/components/schemas/PatchedCyclerTestRequest"
                             }
                         }
                     }
@@ -1847,6 +1852,7 @@
                                                 "Charge at 1 A until 4.1 V",
                                                 "Discharge at 1 C for 10 hours or until 3.3 V"
                                             ],
+                                            "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": true,
                                                 "destroy": false,
@@ -1994,17 +2000,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Equipment"
+                                "$ref": "#/components/schemas/EquipmentRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Equipment"
+                                "$ref": "#/components/schemas/EquipmentRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/Equipment"
+                                "$ref": "#/components/schemas/EquipmentRequest"
                             }
                         }
                     },
@@ -2150,17 +2156,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedEquipment"
+                                "$ref": "#/components/schemas/PatchedEquipmentRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedEquipment"
+                                "$ref": "#/components/schemas/PatchedEquipmentRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedEquipment"
+                                "$ref": "#/components/schemas/PatchedEquipmentRequest"
                             }
                         }
                     }
@@ -2345,17 +2351,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/EquipmentFamily"
+                                "$ref": "#/components/schemas/EquipmentFamilyRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/EquipmentFamily"
+                                "$ref": "#/components/schemas/EquipmentFamilyRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/EquipmentFamily"
+                                "$ref": "#/components/schemas/EquipmentFamilyRequest"
                             }
                         }
                     },
@@ -2503,17 +2509,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedEquipmentFamily"
+                                "$ref": "#/components/schemas/PatchedEquipmentFamilyRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedEquipmentFamily"
+                                "$ref": "#/components/schemas/PatchedEquipmentFamilyRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedEquipmentFamily"
+                                "$ref": "#/components/schemas/PatchedEquipmentFamilyRequest"
                             }
                         }
                     }
@@ -2890,7 +2896,7 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/experiments/1/",
-                                                    "uuid": "1",
+                                                    "uuid": "0001-0002-0003-0004",
                                                     "title": "Example Experiment",
                                                     "description": "Example description",
                                                     "authors": [
@@ -2932,17 +2938,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Experiment"
+                                "$ref": "#/components/schemas/ExperimentRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Experiment"
+                                "$ref": "#/components/schemas/ExperimentRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/Experiment"
+                                "$ref": "#/components/schemas/ExperimentRequest"
                             }
                         }
                     },
@@ -2970,7 +2976,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/experiments/1/",
-                                            "uuid": "1",
+                                            "uuid": "0001-0002-0003-0004",
                                             "title": "Example Experiment",
                                             "description": "Example description",
                                             "authors": [
@@ -3042,7 +3048,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/experiments/1/",
-                                            "uuid": "1",
+                                            "uuid": "0001-0002-0003-0004",
                                             "title": "Example Experiment",
                                             "description": "Example description",
                                             "authors": [
@@ -3093,17 +3099,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedExperiment"
+                                "$ref": "#/components/schemas/PatchedExperimentRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedExperiment"
+                                "$ref": "#/components/schemas/PatchedExperimentRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedExperiment"
+                                "$ref": "#/components/schemas/PatchedExperimentRequest"
                             }
                         }
                     }
@@ -3130,7 +3136,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/experiments/1/",
-                                            "uuid": "1",
+                                            "uuid": "0001-0002-0003-0004",
                                             "title": "Example Experiment",
                                             "description": "Example description",
                                             "authors": [
@@ -3250,9 +3256,10 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/observed_files/1/",
-                                                    "uuid": "1",
+                                                    "uuid": "1001-1001-1001-1001",
                                                     "path": "/home/example_user/example_data.csv",
                                                     "harvester": "http://localhost:8001/harvesters/1/",
+                                                    "column_errors": [],
                                                     "team": "http://localhost:8001/teams/1/",
                                                     "permissions": {
                                                         "create": false,
@@ -3316,9 +3323,10 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/observed_files/1/",
-                                            "uuid": "1",
+                                            "uuid": "1001-1001-1001-1001",
                                             "path": "/home/example_user/example_data.csv",
                                             "harvester": "http://localhost:8001/harvesters/1/",
+                                            "column_errors": [],
                                             "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": false,
@@ -3355,25 +3363,6 @@
                 "tags": [
                     "files"
                 ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PatchedObservedFile"
-                            }
-                        },
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PatchedObservedFile"
-                            }
-                        },
-                        "multipart/form-data": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PatchedObservedFile"
-                            }
-                        }
-                    }
-                },
                 "security": [
                     {
                         "knoxTokenAuth": []
@@ -3396,9 +3385,10 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/observed_files/1/",
-                                            "uuid": "1",
+                                            "uuid": "1001-1001-1001-1001",
                                             "path": "/home/example_user/example_data.csv",
                                             "harvester": "http://localhost:8001/harvesters/1/",
+                                            "column_errors": [],
                                             "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": false,
@@ -3460,9 +3450,10 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/observed_files/1/",
-                                            "uuid": "1",
+                                            "uuid": "1001-1001-1001-1001",
                                             "path": "/home/example_user/example_data.csv",
                                             "harvester": "http://localhost:8001/harvesters/1/",
+                                            "column_errors": [],
                                             "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": false,
@@ -3644,17 +3635,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedGroup"
+                                "$ref": "#/components/schemas/PatchedGroupRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedGroup"
+                                "$ref": "#/components/schemas/PatchedGroupRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedGroup"
+                                "$ref": "#/components/schemas/PatchedGroupRequest"
                             }
                         }
                     }
@@ -3775,7 +3766,7 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/harvest_errors/1/",
-                                                    "uuid": "1",
+                                                    "id": "1",
                                                     "harvester": "http://localhost:8001/harvesters/1/",
                                                     "file": "http://localhost:8001/observed_files/1/",
                                                     "error": "Error message",
@@ -3841,7 +3832,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/harvest_errors/1/",
-                                            "uuid": "1",
+                                            "id": "1",
                                             "harvester": "http://localhost:8001/harvesters/1/",
                                             "file": "http://localhost:8001/observed_files/1/",
                                             "error": "Error message",
@@ -3919,7 +3910,7 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/harvesters/1/",
-                                                    "uuid": "1",
+                                                    "uuid": "1234-5678-1234-5678",
                                                     "name": "Example Harvester",
                                                     "sleep_time": 60,
                                                     "environment_variables": {
@@ -3990,7 +3981,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/harvesters/1/",
-                                            "uuid": "1",
+                                            "uuid": "1234-5678-1234-5678",
                                             "name": "Example Harvester",
                                             "sleep_time": 60,
                                             "environment_variables": {
@@ -4039,17 +4030,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedHarvester"
+                                "$ref": "#/components/schemas/PatchedHarvesterRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedHarvester"
+                                "$ref": "#/components/schemas/PatchedHarvesterRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedHarvester"
+                                "$ref": "#/components/schemas/PatchedHarvesterRequest"
                             }
                         }
                     }
@@ -4076,7 +4067,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/harvesters/1/",
-                                            "uuid": "1",
+                                            "uuid": "1234-5678-1234-5678",
                                             "name": "Example Harvester",
                                             "sleep_time": 60,
                                             "environment_variables": {
@@ -4208,17 +4199,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Lab"
+                                "$ref": "#/components/schemas/LabRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Lab"
+                                "$ref": "#/components/schemas/LabRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/Lab"
+                                "$ref": "#/components/schemas/LabRequest"
                             }
                         }
                     },
@@ -4384,17 +4375,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedLab"
+                                "$ref": "#/components/schemas/PatchedLabRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedLab"
+                                "$ref": "#/components/schemas/PatchedLabRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedLab"
+                                "$ref": "#/components/schemas/PatchedLabRequest"
                             }
                         }
                     }
@@ -4578,6 +4569,9 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/monitored_paths/1/",
+                                                    "files": [
+                                                        "http://localhost:8001/files/1001-1001-1001-1001/"
+                                                    ],
                                                     "permissions": {
                                                         "create": false,
                                                         "destroy": false,
@@ -4608,17 +4602,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/MonitoredPath"
+                                "$ref": "#/components/schemas/MonitoredPathRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/MonitoredPath"
+                                "$ref": "#/components/schemas/MonitoredPathRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/MonitoredPath"
+                                "$ref": "#/components/schemas/MonitoredPathRequest"
                             }
                         }
                     },
@@ -4646,6 +4640,9 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/monitored_paths/1/",
+                                            "files": [
+                                                "http://localhost:8001/files/1001-1001-1001-1001/"
+                                            ],
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -4706,6 +4703,9 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/monitored_paths/1/",
+                                            "files": [
+                                                "http://localhost:8001/files/1001-1001-1001-1001/"
+                                            ],
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -4746,17 +4746,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedMonitoredPath"
+                                "$ref": "#/components/schemas/PatchedMonitoredPathRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedMonitoredPath"
+                                "$ref": "#/components/schemas/PatchedMonitoredPathRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedMonitoredPath"
+                                "$ref": "#/components/schemas/PatchedMonitoredPathRequest"
                             }
                         }
                     }
@@ -4783,6 +4783,9 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/monitored_paths/1/",
+                                            "files": [
+                                                "http://localhost:8001/files/1001-1001-1001-1001/"
+                                            ],
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -4944,17 +4947,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/ScheduleFamily"
+                                "$ref": "#/components/schemas/ScheduleFamilyRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/ScheduleFamily"
+                                "$ref": "#/components/schemas/ScheduleFamilyRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/ScheduleFamily"
+                                "$ref": "#/components/schemas/ScheduleFamilyRequest"
                             }
                         }
                     },
@@ -5126,17 +5129,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedScheduleFamily"
+                                "$ref": "#/components/schemas/PatchedScheduleFamilyRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedScheduleFamily"
+                                "$ref": "#/components/schemas/PatchedScheduleFamilyRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedScheduleFamily"
+                                "$ref": "#/components/schemas/PatchedScheduleFamilyRequest"
                             }
                         }
                     }
@@ -5414,17 +5417,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Schedule"
+                                "$ref": "#/components/schemas/ScheduleRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Schedule"
+                                "$ref": "#/components/schemas/ScheduleRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/Schedule"
+                                "$ref": "#/components/schemas/ScheduleRequest"
                             }
                         }
                     },
@@ -5578,17 +5581,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedSchedule"
+                                "$ref": "#/components/schemas/PatchedScheduleRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedSchedule"
+                                "$ref": "#/components/schemas/PatchedScheduleRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedSchedule"
+                                "$ref": "#/components/schemas/PatchedScheduleRequest"
                             }
                         }
                     }
@@ -5921,17 +5924,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Team"
+                                "$ref": "#/components/schemas/TeamRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Team"
+                                "$ref": "#/components/schemas/TeamRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/Team"
+                                "$ref": "#/components/schemas/TeamRequest"
                             }
                         }
                     },
@@ -6175,17 +6178,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedTeam"
+                                "$ref": "#/components/schemas/PatchedTeamRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedTeam"
+                                "$ref": "#/components/schemas/PatchedTeamRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedTeam"
+                                "$ref": "#/components/schemas/PatchedTeamRequest"
                             }
                         }
                     }
@@ -6379,6 +6382,7 @@
                                                 {
                                                     "url": "http://localhost:8001/tokens/1/",
                                                     "name": "Example Token",
+                                                    "created": "2021-08-18T15:23:45.123456Z",
                                                     "permissions": {
                                                         "create": false,
                                                         "destroy": false,
@@ -6442,6 +6446,7 @@
                                         "value": {
                                             "url": "http://localhost:8001/tokens/1/",
                                             "name": "Example Token",
+                                            "created": "2021-08-18T15:23:45.123456Z",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -6481,17 +6486,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedKnoxToken"
+                                "$ref": "#/components/schemas/PatchedKnoxTokenRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedKnoxToken"
+                                "$ref": "#/components/schemas/PatchedKnoxTokenRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedKnoxToken"
+                                "$ref": "#/components/schemas/PatchedKnoxTokenRequest"
                             }
                         }
                     }
@@ -6520,6 +6525,7 @@
                                         "value": {
                                             "url": "http://localhost:8001/tokens/1/",
                                             "name": "Example Token",
+                                            "created": "2021-08-18T15:23:45.123456Z",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -6788,17 +6794,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/User"
+                                "$ref": "#/components/schemas/UserRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/User"
+                                "$ref": "#/components/schemas/UserRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/User"
+                                "$ref": "#/components/schemas/UserRequest"
                             }
                         }
                     },
@@ -6945,17 +6951,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedUserUpdate"
+                                "$ref": "#/components/schemas/PatchedUserUpdateRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedUserUpdate"
+                                "$ref": "#/components/schemas/PatchedUserUpdateRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedUserUpdate"
+                                "$ref": "#/components/schemas/PatchedUserUpdateRequest"
                             }
                         }
                     }
@@ -7086,7 +7092,7 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/validation_schemas/1/",
-                                                    "uuid": "1",
+                                                    "uuid": "4321-4321-4321-4321",
                                                     "name": "Example Validation Schema",
                                                     "schema": {
                                                         "type": "object",
@@ -7128,17 +7134,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/ValidationSchema"
+                                "$ref": "#/components/schemas/ValidationSchemaRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/ValidationSchema"
+                                "$ref": "#/components/schemas/ValidationSchemaRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/ValidationSchema"
+                                "$ref": "#/components/schemas/ValidationSchemaRequest"
                             }
                         }
                     },
@@ -7166,7 +7172,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "1",
+                                            "uuid": "4321-4321-4321-4321",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7238,7 +7244,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "1",
+                                            "uuid": "4321-4321-4321-4321",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7290,17 +7296,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/ValidationSchema"
+                                "$ref": "#/components/schemas/ValidationSchemaRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/ValidationSchema"
+                                "$ref": "#/components/schemas/ValidationSchemaRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/ValidationSchema"
+                                "$ref": "#/components/schemas/ValidationSchemaRequest"
                             }
                         }
                     },
@@ -7328,7 +7334,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "1",
+                                            "uuid": "4321-4321-4321-4321",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7380,17 +7386,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedValidationSchema"
+                                "$ref": "#/components/schemas/PatchedValidationSchemaRequest"
                             }
                         },
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedValidationSchema"
+                                "$ref": "#/components/schemas/PatchedValidationSchemaRequest"
                             }
                         },
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/PatchedValidationSchema"
+                                "$ref": "#/components/schemas/PatchedValidationSchemaRequest"
                             }
                         }
                     }
@@ -7417,7 +7423,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "1",
+                                            "uuid": "4321-4321-4321-4321",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7707,7 +7713,114 @@
                     "uuid"
                 ]
             },
-            "CreateKnoxToken": {
+            "CellFamilyRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "manufacturer": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Manufacturer name"
+                    },
+                    "model": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Model number"
+                    },
+                    "datasheet": {
+                        "type": "string",
+                        "format": "uri",
+                        "nullable": true,
+                        "description": "Link to the datasheet",
+                        "maxLength": 200
+                    },
+                    "chemistry": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Chemistry type"
+                    },
+                    "nominal_voltage": {
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true,
+                        "description": "Nominal voltage of the cells (in volts)"
+                    },
+                    "nominal_capacity": {
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true,
+                        "description": "Nominal capacity of the cells (in amp hours)"
+                    },
+                    "initial_ac_impedance": {
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true,
+                        "description": "Initial AC impedance of the cells (in ohms)"
+                    },
+                    "initial_dc_resistance": {
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true,
+                        "description": "Initial DC resistance of the cells (in ohms)"
+                    },
+                    "energy_density": {
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true,
+                        "description": "Energy density of the cells (in watt hours per kilogram)"
+                    },
+                    "power_density": {
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true,
+                        "description": "Power density of the cells (in watts per kilogram)"
+                    },
+                    "form_factor": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Physical form factor"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "chemistry",
+                    "form_factor",
+                    "manufacturer",
+                    "model",
+                    "team"
+                ]
+            },
+            "CellRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "identifier": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Unique identifier (e.g. serial number) for the cell"
+                    },
+                    "family": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Cell Family this Cell belongs to"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "family",
+                    "identifier",
+                    "team"
+                ]
+            },
+            "CreateKnoxTokenRequest": {
                 "type": "object",
                 "properties": {
                     "ttl": {
@@ -7715,7 +7828,8 @@
                         "description": "Time to live (s)"
                     },
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "minLength": 1
                     }
                 },
                 "required": [
@@ -7790,6 +7904,41 @@
                     "team",
                     "url",
                     "uuid"
+                ]
+            },
+            "CyclerTestRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "cell": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Cell this Cycler Test uses"
+                    },
+                    "equipment": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "description": "Equipment this Cycler Test uses"
+                    },
+                    "schedule": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Schedule this Cycler Test uses"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "cell",
+                    "equipment",
+                    "schedule",
+                    "team"
                 ]
             },
             "DataColumn": {
@@ -8142,6 +8291,70 @@
                     "uuid"
                 ]
             },
+            "EquipmentFamilyRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Equipment type"
+                    },
+                    "manufacturer": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Manufacturer name"
+                    },
+                    "model": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Model number"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "manufacturer",
+                    "model",
+                    "team",
+                    "type"
+                ]
+            },
+            "EquipmentRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "identifier": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Unique identifier (e.g. serial number) for the equipment"
+                    },
+                    "family": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Equipment Family this Equipment belongs to"
+                    },
+                    "calibration_date": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true,
+                        "description": "Date of last calibration"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "family",
+                    "identifier",
+                    "team"
+                ]
+            },
             "Error": {
                 "type": "object",
                 "properties": {
@@ -8236,6 +8449,60 @@
                     "uuid"
                 ]
             },
+            "ExperimentRequest": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Title of the experiment"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true,
+                        "description": "Description of the experiment"
+                    },
+                    "authors": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "description": "Users who created this Experiment"
+                    },
+                    "protocol": {
+                        "type": "object",
+                        "additionalProperties": {},
+                        "nullable": true,
+                        "description": "Protocol of the experiment"
+                    },
+                    "protocol_file": {
+                        "type": "string",
+                        "format": "binary",
+                        "nullable": true,
+                        "description": "Protocol file of the experiment"
+                    },
+                    "cycler_tests": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "description": "Cycler Tests using this Experiment"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "authors",
+                    "cycler_tests",
+                    "team",
+                    "title"
+                ]
+            },
             "Group": {
                 "type": "object",
                 "properties": {
@@ -8275,7 +8542,19 @@
                             }
                         },
                         "readOnly": true
-                    },
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "permissions",
+                    "url",
+                    "users"
+                ]
+            },
+            "GroupRequest": {
+                "type": "object",
+                "properties": {
                     "add_users": {
                         "type": "array",
                         "items": {
@@ -8296,14 +8575,7 @@
                         "writeOnly": true,
                         "description": "Users to remove"
                     }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "permissions",
-                    "url",
-                    "users"
-                ]
+                }
             },
             "HarvestError": {
                 "type": "object",
@@ -8617,6 +8889,34 @@
                     "url"
                 ]
             },
+            "LabRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Human-friendly Lab identifier"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true,
+                        "minLength": 1,
+                        "description": "Description of the Lab"
+                    },
+                    "admin_group": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/GroupRequest"
+                            }
+                        ],
+                        "description": "Group of users who can edit this Lab"
+                    }
+                },
+                "required": [
+                    "admin_group",
+                    "name"
+                ]
+            },
             "MonitoredPath": {
                 "type": "object",
                 "properties": {
@@ -8695,6 +8995,46 @@
                     "team",
                     "url",
                     "uuid"
+                ]
+            },
+            "MonitoredPathRequest": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Directory location on Harvester"
+                    },
+                    "regex": {
+                        "type": "string",
+                        "nullable": true,
+                        "description": "\n    Python.re regular expression to filter files by, \n    applied to full file name starting from this Path's directory"
+                    },
+                    "stable_time": {
+                        "type": "integer",
+                        "maximum": 32767,
+                        "minimum": 0,
+                        "description": "Number of seconds files must remain stable to be processed"
+                    },
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "harvester": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Harvester this MonitoredPath is on"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this MonitoredPath belongs to"
+                    }
+                },
+                "required": [
+                    "harvester",
+                    "path",
+                    "regex",
+                    "team"
                 ]
             },
             "ObservedFile": {
@@ -9453,84 +9793,18 @@
                     }
                 }
             },
-            "PatchedCell": {
+            "PatchedCellFamilyRequest": {
                 "type": "object",
                 "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
-                    "identifier": {
-                        "type": "string",
-                        "description": "Unique identifier (e.g. serial number) for the cell"
-                    },
-                    "family": {
-                        "type": "string",
-                        "format": "uri",
-                        "description": "Cell Family this Cell belongs to"
-                    },
-                    "cycler_tests": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Cycler Tests using this Cell"
-                    },
-                    "in_use": {
-                        "type": "boolean",
-                        "readOnly": true
-                    },
-                    "team": {
-                        "type": "string",
-                        "format": "uri",
-                        "description": "Team this resource belongs to"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
-                    }
-                }
-            },
-            "PatchedCellFamily": {
-                "type": "object",
-                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
-                "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
                     "manufacturer": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Manufacturer name"
                     },
                     "model": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Model number"
                     },
                     "datasheet": {
@@ -9542,6 +9816,7 @@
                     },
                     "chemistry": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Chemistry type"
                     },
                     "nominal_voltage": {
@@ -9582,57 +9857,41 @@
                     },
                     "form_factor": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Physical form factor"
-                    },
-                    "cells": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Cells belonging to this Cell Family"
-                    },
-                    "in_use": {
-                        "type": "boolean",
-                        "readOnly": true
                     },
                     "team": {
                         "type": "string",
                         "format": "uri",
                         "description": "Team this resource belongs to"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
-            "PatchedCyclerTest": {
+            "PatchedCellRequest": {
                 "type": "object",
                 "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
                 "properties": {
-                    "url": {
+                    "identifier": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Unique identifier (e.g. serial number) for the cell"
+                    },
+                    "family": {
                         "type": "string",
                         "format": "uri",
-                        "readOnly": true
+                        "description": "Cell Family this Cell belongs to"
                     },
-                    "uuid": {
+                    "team": {
                         "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                }
+            },
+            "PatchedCyclerTestRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
                     "cell": {
                         "type": "string",
                         "format": "uri",
@@ -9651,50 +9910,46 @@
                         "format": "uri",
                         "description": "Schedule this Cycler Test uses"
                     },
-                    "rendered_schedule": {
+                    "team": {
                         "type": "string",
-                        "nullable": true,
-                        "readOnly": true,
-                        "description": "Rendered schedule"
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                }
+            },
+            "PatchedEquipmentFamilyRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Equipment type"
+                    },
+                    "manufacturer": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Manufacturer name"
+                    },
+                    "model": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Model number"
                     },
                     "team": {
                         "type": "string",
                         "format": "uri",
                         "description": "Team this resource belongs to"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
-            "PatchedEquipment": {
+            "PatchedEquipmentRequest": {
                 "type": "object",
                 "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
                     "identifier": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Unique identifier (e.g. serial number) for the equipment"
                     },
                     "family": {
@@ -9708,118 +9963,19 @@
                         "nullable": true,
                         "description": "Date of last calibration"
                     },
-                    "in_use": {
-                        "type": "boolean",
-                        "readOnly": true
-                    },
                     "team": {
                         "type": "string",
                         "format": "uri",
                         "description": "Team this resource belongs to"
-                    },
-                    "cycler_tests": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Cycler Tests using this Equipment"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
-            "PatchedEquipmentFamily": {
-                "type": "object",
-                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
-                "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "Equipment type"
-                    },
-                    "manufacturer": {
-                        "type": "string",
-                        "description": "Manufacturer name"
-                    },
-                    "model": {
-                        "type": "string",
-                        "description": "Model number"
-                    },
-                    "in_use": {
-                        "type": "boolean",
-                        "readOnly": true
-                    },
-                    "team": {
-                        "type": "string",
-                        "format": "uri",
-                        "description": "Team this resource belongs to"
-                    },
-                    "equipment": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Equipment belonging to this Equipment Family"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
-                    }
-                }
-            },
-            "PatchedExperiment": {
+            "PatchedExperimentRequest": {
                 "type": "object",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Canonical URL for this object"
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
                     "title": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Title of the experiment"
                     },
                     "description": {
@@ -9843,7 +9999,7 @@
                     },
                     "protocol_file": {
                         "type": "string",
-                        "format": "uri",
+                        "format": "binary",
                         "nullable": true,
                         "description": "Protocol file of the experiment"
                     },
@@ -9859,64 +10015,12 @@
                         "type": "string",
                         "format": "uri",
                         "description": "Team this resource belongs to"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
-            "PatchedGroup": {
+            "PatchedGroupRequest": {
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "readOnly": true
-                    },
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "name": {
-                        "type": "string",
-                        "readOnly": true
-                    },
-                    "users": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Users in the group"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
-                    },
                     "add_users": {
                         "type": "array",
                         "items": {
@@ -9939,50 +10043,12 @@
                     }
                 }
             },
-            "PatchedHarvester": {
+            "PatchedHarvesterRequest": {
                 "type": "object",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Canonical URL for this object"
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
-                    "last_check_in": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Date and time of last Harvester contact"
-                    },
-                    "lab": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Lab this Harvester belongs to"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
-                    },
                     "name": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Human-friendly Harvester identifier"
                     },
                     "sleep_time": {
@@ -10002,117 +10068,46 @@
                     }
                 }
             },
-            "PatchedKnoxToken": {
+            "PatchedKnoxTokenRequest": {
                 "type": "object",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "Canonical URL for this object"
-                    },
-                    "id": {
-                        "type": "integer",
-                        "readOnly": true,
-                        "description": "Auto-assigned object identifier"
-                    },
                     "name": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Convenient human-friendly name"
-                    },
-                    "created": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true,
-                        "description": "Date and time of creation"
-                    },
-                    "expiry": {
-                        "type": "string",
-                        "format": "date-time",
-                        "nullable": true,
-                        "readOnly": true,
-                        "description": "Date and time token expires (blank = never)"
                     }
                 }
             },
-            "PatchedLab": {
+            "PatchedLabRequest": {
                 "type": "object",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "id": {
-                        "type": "integer",
-                        "readOnly": true
-                    },
                     "name": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Human-friendly Lab identifier"
                     },
                     "description": {
                         "type": "string",
                         "nullable": true,
+                        "minLength": 1,
                         "description": "Description of the Lab"
                     },
                     "admin_group": {
                         "allOf": [
                             {
-                                "$ref": "#/components/schemas/Group"
+                                "$ref": "#/components/schemas/GroupRequest"
                             }
                         ],
                         "description": "Group of users who can edit this Lab"
-                    },
-                    "harvesters": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true
-                    },
-                    "teams": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Teams in this Lab"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
-            "PatchedMonitoredPath": {
+            "PatchedMonitoredPathRequest": {
                 "type": "object",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Canonical URL for this object"
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
                     "path": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Directory location on Harvester"
                     },
                     "regex": {
@@ -10128,271 +10123,20 @@
                     },
                     "active": {
                         "type": "boolean"
-                    },
-                    "files": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Files on this MonitoredPath"
-                    },
-                    "harvester": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Harvester this MonitoredPath is on"
-                    },
-                    "team": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Team this MonitoredPath belongs to"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
-            "PatchedObservedFile": {
-                "type": "object",
-                "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Canonical URL for this object"
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
-                    "harvester": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true,
-                        "description": "Harvester this File belongs to"
-                    },
-                    "name": {
-                        "type": "string",
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Name of the file"
-                    },
-                    "path": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "Absolute file path"
-                    },
-                    "state": {
-                        "enum": [
-                            "RETRY IMPORT",
-                            "IMPORT FAILED",
-                            "UNSTABLE",
-                            "GROWING",
-                            "STABLE",
-                            "IMPORTING",
-                            "IMPORTED"
-                        ],
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "File status; autogenerated but can be manually set to RETRY IMPORT"
-                    },
-                    "parser": {
-                        "type": "string",
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Parser used by the harvester"
-                    },
-                    "num_rows": {
-                        "type": "integer",
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Number of rows in the file"
-                    },
-                    "first_sample_no": {
-                        "type": "integer",
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Number of the first sample in the file"
-                    },
-                    "last_sample_no": {
-                        "type": "integer",
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Number of the last sample in the file"
-                    },
-                    "extra_metadata": {
-                        "type": "object",
-                        "additionalProperties": {},
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Extra metadata from the harvester"
-                    },
-                    "has_required_columns": {
-                        "type": "boolean",
-                        "readOnly": true,
-                        "description": "Whether the file has all required columns"
-                    },
-                    "last_observed_time": {
-                        "type": "string",
-                        "format": "date-time",
-                        "readOnly": true,
-                        "nullable": true,
-                        "description": "Date and time of last Harvester report on file"
-                    },
-                    "last_observed_size": {
-                        "type": "integer",
-                        "readOnly": true,
-                        "description": "Size of the file as last reported by Harvester"
-                    },
-                    "upload_errors": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Errors associated with this File"
-                    },
-                    "column_errors": {
-                        "type": "array",
-                        "items": {},
-                        "readOnly": true,
-                        "description": "Errors in uploaded columns"
-                    },
-                    "upload_info": {
-                        "type": "object",
-                        "additionalProperties": {},
-                        "nullable": true,
-                        "readOnly": true,
-                        "description": "Metadata required for harvester program to resume file parsing"
-                    },
-                    "columns": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Columns extracted from this File"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
-                    }
-                }
-            },
-            "PatchedSchedule": {
+            "PatchedScheduleFamilyRequest": {
                 "type": "object",
                 "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
-                    "family": {
-                        "type": "string",
-                        "format": "uri",
-                        "description": "Schedule Family this Schedule belongs to"
-                    },
-                    "schedule_file": {
-                        "type": "string",
-                        "format": "uri",
-                        "nullable": true,
-                        "description": "File containing the schedule"
-                    },
-                    "pybamm_schedule_variables": {
-                        "type": "object",
-                        "additionalProperties": {},
-                        "nullable": true,
-                        "description": "Variables used in the PyBaMM.Experiment representation of the schedule"
-                    },
-                    "in_use": {
-                        "type": "boolean",
-                        "readOnly": true
-                    },
-                    "team": {
-                        "type": "string",
-                        "format": "uri",
-                        "description": "Team this resource belongs to"
-                    },
-                    "cycler_tests": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Cycler Tests using this Schedule"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
-                    }
-                }
-            },
-            "PatchedScheduleFamily": {
-                "type": "object",
-                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
-                "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
                     "identifier": {
-                        "type": "string"
+                        "type": "string",
+                        "minLength": 1
                     },
                     "description": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Description of the schedule"
                     },
                     "ambient_temperature": {
@@ -10404,178 +10148,59 @@
                     "pybamm_template": {
                         "type": "array",
                         "items": {
-                            "type": "string"
+                            "type": "string",
+                            "minLength": 1
                         },
                         "nullable": true,
                         "description": "Template for the schedule in PyBaMM format"
-                    },
-                    "in_use": {
-                        "type": "boolean",
-                        "readOnly": true
                     },
                     "team": {
                         "type": "string",
                         "format": "uri",
                         "description": "Team this resource belongs to"
-                    },
-                    "schedules": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Schedules belonging to this Schedule Family"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
-            "PatchedTeam": {
+            "PatchedScheduleRequest": {
                 "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
                 "properties": {
-                    "url": {
+                    "family": {
                         "type": "string",
                         "format": "uri",
-                        "readOnly": true
+                        "description": "Schedule Family this Schedule belongs to"
                     },
-                    "id": {
-                        "type": "integer",
-                        "readOnly": true
+                    "schedule_file": {
+                        "type": "string",
+                        "format": "binary",
+                        "nullable": true,
+                        "description": "File containing the schedule"
                     },
-                    "member_group": {
-                        "allOf": [
-                            {
-                                "$ref": "#/components/schemas/Group"
-                            }
-                        ],
-                        "readOnly": true,
-                        "description": "Members of this Team"
-                    },
-                    "admin_group": {
-                        "allOf": [
-                            {
-                                "$ref": "#/components/schemas/Group"
-                            }
-                        ],
-                        "readOnly": true,
-                        "description": "Administrators of this Team"
-                    },
-                    "monitored_paths": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true
-                    },
-                    "cellfamily_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Cell Families belonging to this Team"
-                    },
-                    "cell_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Cells belonging to this Team"
-                    },
-                    "equipmentfamily_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Equipment Families belonging to this Team"
-                    },
-                    "equipment_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Equipment belonging to this Team"
-                    },
-                    "schedulefamily_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Schedule Families belonging to this Team"
-                    },
-                    "schedule_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Schedules belonging to this Team"
-                    },
-                    "cyclertest_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Cycler Tests belonging to this Team"
-                    },
-                    "experiment_resources": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "readOnly": true,
-                        "description": "Experiments belonging to this Team"
-                    },
-                    "permissions": {
+                    "pybamm_schedule_variables": {
                         "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
+                        "additionalProperties": {},
+                        "nullable": true,
+                        "description": "Variables used in the PyBaMM.Experiment representation of the schedule"
                     },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                }
+            },
+            "PatchedTeamRequest": {
+                "type": "object",
+                "properties": {
                     "name": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Human-friendly Team identifier"
                     },
                     "description": {
                         "type": "string",
                         "nullable": true,
+                        "minLength": 1,
                         "description": "Description of the Team"
                     },
                     "lab": {
@@ -10585,37 +10210,30 @@
                     }
                 }
             },
-            "PatchedUserUpdate": {
+            "PatchedUserUpdateRequest": {
                 "type": "object",
                 "properties": {
                     "email": {
                         "type": "string",
                         "format": "email",
+                        "minLength": 1,
                         "description": "Your updated email"
                     },
                     "password": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Your new password"
                     },
                     "currentPassword": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Your current password"
                     }
                 }
             },
-            "PatchedValidationSchema": {
+            "PatchedValidationSchemaRequest": {
                 "type": "object",
                 "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri",
-                        "readOnly": true
-                    },
-                    "uuid": {
-                        "type": "string",
-                        "format": "uuid",
-                        "readOnly": true
-                    },
                     "team": {
                         "type": "string",
                         "format": "uri",
@@ -10623,27 +10241,13 @@
                     },
                     "name": {
                         "type": "string",
+                        "minLength": 1,
                         "description": "Human-friendly identifier"
                     },
                     "schema": {
                         "type": "object",
                         "additionalProperties": {},
                         "description": "JSON Schema"
-                    },
-                    "permissions": {
-                        "type": "object",
-                        "properties": {
-                            "read": {
-                                "type": "boolean"
-                            },
-                            "write": {
-                                "type": "boolean"
-                            },
-                            "create": {
-                                "type": "boolean"
-                            }
-                        },
-                        "readOnly": true
                     }
                 }
             },
@@ -10800,6 +10404,78 @@
                     "team",
                     "url",
                     "uuid"
+                ]
+            },
+            "ScheduleFamilyRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "identifier": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "description": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Description of the schedule"
+                    },
+                    "ambient_temperature": {
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true,
+                        "description": "Ambient temperature during the experiment (in degrees Celsius)"
+                    },
+                    "pybamm_template": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "nullable": true,
+                        "description": "Template for the schedule in PyBaMM format"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "description",
+                    "identifier",
+                    "team"
+                ]
+            },
+            "ScheduleRequest": {
+                "type": "object",
+                "description": "A ModelSerializer that maps unrecognised properties in the input to an 'additional_properties' JSONField,\nand unpacks the 'additional_properties' JSONField into the output.\n\nThe Meta.model must have an additional_properties JSONField.",
+                "properties": {
+                    "family": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Schedule Family this Schedule belongs to"
+                    },
+                    "schedule_file": {
+                        "type": "string",
+                        "format": "binary",
+                        "nullable": true,
+                        "description": "File containing the schedule"
+                    },
+                    "pybamm_schedule_variables": {
+                        "type": "object",
+                        "additionalProperties": {},
+                        "nullable": true,
+                        "description": "Variables used in the PyBaMM.Experiment representation of the schedule"
+                    },
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    }
+                },
+                "required": [
+                    "family",
+                    "team"
                 ]
             },
             "SchemaValidation": {
@@ -11039,6 +10715,31 @@
                     "url"
                 ]
             },
+            "TeamRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Human-friendly Team identifier"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true,
+                        "minLength": 1,
+                        "description": "Description of the Team"
+                    },
+                    "lab": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Lab this Team belongs to"
+                    }
+                },
+                "required": [
+                    "lab",
+                    "name"
+                ]
+            },
             "User": {
                 "type": "object",
                 "properties": {
@@ -11108,10 +10809,46 @@
                             }
                         },
                         "readOnly": true
+                    }
+                },
+                "required": [
+                    "groups",
+                    "id",
+                    "is_staff",
+                    "is_superuser",
+                    "permissions",
+                    "url",
+                    "username"
+                ]
+            },
+            "UserRequest": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.",
+                        "pattern": "^[\\w.@+-]+$",
+                        "maxLength": 150
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "title": "Email address",
+                        "maxLength": 254
+                    },
+                    "first_name": {
+                        "type": "string",
+                        "maxLength": 150
+                    },
+                    "last_name": {
+                        "type": "string",
+                        "maxLength": 150
                     },
                     "password": {
                         "type": "string",
                         "writeOnly": true,
+                        "minLength": 1,
                         "description": "Password (8 characters minimum)",
                         "maxLength": 128
                     },
@@ -11122,13 +10859,7 @@
                     }
                 },
                 "required": [
-                    "groups",
-                    "id",
-                    "is_staff",
-                    "is_superuser",
                     "password",
-                    "permissions",
-                    "url",
                     "username"
                 ]
             },
@@ -11182,6 +10913,31 @@
                     "team",
                     "url",
                     "uuid"
+                ]
+            },
+            "ValidationSchemaRequest": {
+                "type": "object",
+                "properties": {
+                    "team": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Team this resource belongs to"
+                    },
+                    "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Human-friendly identifier"
+                    },
+                    "schema": {
+                        "type": "object",
+                        "additionalProperties": {},
+                        "description": "JSON Schema"
+                    }
+                },
+                "required": [
+                    "name",
+                    "schema",
+                    "team"
                 ]
             },
             "ValidationSchemaRootKeys": {

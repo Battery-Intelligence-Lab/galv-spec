@@ -10,7 +10,7 @@ on:
       - main
     workflows: [Validate]
     types:
-      - completed
+      -
   workflow_dispatch:
     inputs:
       save_output:
@@ -27,6 +27,7 @@ on:
 jobs:
   make-clients:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     env:
       POSTGRES_PASSWORD: "galv"
       DJANGO_SECRET_KEY: "long-and-insecure-key-12345"
