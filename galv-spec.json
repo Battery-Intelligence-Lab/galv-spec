@@ -1495,6 +1495,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/tokens/1/",
+                                            "id": 1,
                                             "name": "Example Token",
                                             "token": "example_token_value",
                                             "created": "2021-08-18T15:23:45.123456Z",
@@ -2896,7 +2897,7 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/experiments/1/",
-                                                    "uuid": "0001-0002-0003-0004",
+                                                    "uuid": "d8290e68-bfbb-3bc8-b621-5a9590aa29fd",
                                                     "title": "Example Experiment",
                                                     "description": "Example description",
                                                     "authors": [
@@ -2976,7 +2977,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/experiments/1/",
-                                            "uuid": "0001-0002-0003-0004",
+                                            "uuid": "d8290e68-bfbb-3bc8-b621-5a9590aa29fd",
                                             "title": "Example Experiment",
                                             "description": "Example description",
                                             "authors": [
@@ -3048,7 +3049,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/experiments/1/",
-                                            "uuid": "0001-0002-0003-0004",
+                                            "uuid": "d8290e68-bfbb-3bc8-b621-5a9590aa29fd",
                                             "title": "Example Experiment",
                                             "description": "Example description",
                                             "authors": [
@@ -3136,7 +3137,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/experiments/1/",
-                                            "uuid": "0001-0002-0003-0004",
+                                            "uuid": "d8290e68-bfbb-3bc8-b621-5a9590aa29fd",
                                             "title": "Example Experiment",
                                             "description": "Example description",
                                             "authors": [
@@ -3256,9 +3257,14 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/observed_files/1/",
-                                                    "uuid": "1001-1001-1001-1001",
+                                                    "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                                     "path": "/home/example_user/example_data.csv",
-                                                    "harvester": "http://localhost:8001/harvesters/1/",
+                                                    "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                                    "columns": [
+                                                        "http://localhost:8001/columns/1/",
+                                                        "http://localhost:8001/columns/2/",
+                                                        "http://localhost:8001/columns/3/"
+                                                    ],
                                                     "column_errors": [],
                                                     "team": "http://localhost:8001/teams/1/",
                                                     "permissions": {
@@ -3323,9 +3329,14 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/observed_files/1/",
-                                            "uuid": "1001-1001-1001-1001",
+                                            "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                             "path": "/home/example_user/example_data.csv",
-                                            "harvester": "http://localhost:8001/harvesters/1/",
+                                            "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "columns": [
+                                                "http://localhost:8001/columns/1/",
+                                                "http://localhost:8001/columns/2/",
+                                                "http://localhost:8001/columns/3/"
+                                            ],
                                             "column_errors": [],
                                             "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
@@ -3385,9 +3396,14 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/observed_files/1/",
-                                            "uuid": "1001-1001-1001-1001",
+                                            "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                             "path": "/home/example_user/example_data.csv",
-                                            "harvester": "http://localhost:8001/harvesters/1/",
+                                            "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "columns": [
+                                                "http://localhost:8001/columns/1/",
+                                                "http://localhost:8001/columns/2/",
+                                                "http://localhost:8001/columns/3/"
+                                            ],
                                             "column_errors": [],
                                             "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
@@ -3450,9 +3466,14 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/observed_files/1/",
-                                            "uuid": "1001-1001-1001-1001",
+                                            "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                             "path": "/home/example_user/example_data.csv",
-                                            "harvester": "http://localhost:8001/harvesters/1/",
+                                            "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "columns": [
+                                                "http://localhost:8001/columns/1/",
+                                                "http://localhost:8001/columns/2/",
+                                                "http://localhost:8001/columns/3/"
+                                            ],
                                             "column_errors": [],
                                             "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
@@ -3766,8 +3787,8 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/harvest_errors/1/",
-                                                    "id": "1",
-                                                    "harvester": "http://localhost:8001/harvesters/1/",
+                                                    "id": 1,
+                                                    "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
                                                     "file": "http://localhost:8001/observed_files/1/",
                                                     "error": "Error message",
                                                     "timestamp": "2021-08-18T15:23:45.123456Z",
@@ -3832,8 +3853,8 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/harvest_errors/1/",
-                                            "id": "1",
-                                            "harvester": "http://localhost:8001/harvesters/1/",
+                                            "id": 1,
+                                            "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
                                             "file": "http://localhost:8001/observed_files/1/",
                                             "error": "Error message",
                                             "timestamp": "2021-08-18T15:23:45.123456Z",
@@ -3909,8 +3930,8 @@
                                             "previous": "http://api.example.org/accounts/?offset=200&limit=100",
                                             "results": [
                                                 {
-                                                    "url": "http://localhost:8001/harvesters/1/",
-                                                    "uuid": "1234-5678-1234-5678",
+                                                    "url": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                                    "uuid": "d8290e68-bfbb-3bc8-b621-5a9590aa29fd",
                                                     "name": "Example Harvester",
                                                     "sleep_time": 60,
                                                     "environment_variables": {
@@ -3980,8 +4001,8 @@
                                 "examples": {
                                     "ValidExample": {
                                         "value": {
-                                            "url": "http://localhost:8001/harvesters/1/",
-                                            "uuid": "1234-5678-1234-5678",
+                                            "url": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "uuid": "d8290e68-bfbb-3bc8-b621-5a9590aa29fd",
                                             "name": "Example Harvester",
                                             "sleep_time": 60,
                                             "environment_variables": {
@@ -4066,8 +4087,8 @@
                                 "examples": {
                                     "ValidExample": {
                                         "value": {
-                                            "url": "http://localhost:8001/harvesters/1/",
-                                            "uuid": "1234-5678-1234-5678",
+                                            "url": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "uuid": "d8290e68-bfbb-3bc8-b621-5a9590aa29fd",
                                             "name": "Example Harvester",
                                             "sleep_time": 60,
                                             "environment_variables": {
@@ -4568,10 +4589,17 @@
                                             "previous": "http://api.example.org/accounts/?offset=200&limit=100",
                                             "results": [
                                                 {
-                                                    "url": "http://localhost:8001/monitored_paths/1/",
+                                                    "url": "http://localhost:8001/monitored_paths/172f2460-9528-11ee-8454-eb9d381d3cc4/",
+                                                    "uuid": "172f2460-9528-11ee-8454-eb9d381d3cc4",
                                                     "files": [
-                                                        "http://localhost:8001/files/1001-1001-1001-1001/"
+                                                        "http://localhost:8001/files/c690ddf0-9527-11ee-8454-eb9d381d3cc4/"
                                                     ],
+                                                    "path": "/home/example_user/example_data.csv",
+                                                    "regex": ".*\\.csv",
+                                                    "stable_time": 60,
+                                                    "active": true,
+                                                    "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                                    "team": "http://localhost:8001/teams/1/",
                                                     "permissions": {
                                                         "create": false,
                                                         "destroy": false,
@@ -4639,10 +4667,17 @@
                                 "examples": {
                                     "ValidExample": {
                                         "value": {
-                                            "url": "http://localhost:8001/monitored_paths/1/",
+                                            "url": "http://localhost:8001/monitored_paths/172f2460-9528-11ee-8454-eb9d381d3cc4/",
+                                            "uuid": "172f2460-9528-11ee-8454-eb9d381d3cc4",
                                             "files": [
-                                                "http://localhost:8001/files/1001-1001-1001-1001/"
+                                                "http://localhost:8001/files/c690ddf0-9527-11ee-8454-eb9d381d3cc4/"
                                             ],
+                                            "path": "/home/example_user/example_data.csv",
+                                            "regex": ".*\\.csv",
+                                            "stable_time": 60,
+                                            "active": true,
+                                            "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -4702,10 +4737,17 @@
                                 "examples": {
                                     "ValidExample": {
                                         "value": {
-                                            "url": "http://localhost:8001/monitored_paths/1/",
+                                            "url": "http://localhost:8001/monitored_paths/172f2460-9528-11ee-8454-eb9d381d3cc4/",
+                                            "uuid": "172f2460-9528-11ee-8454-eb9d381d3cc4",
                                             "files": [
-                                                "http://localhost:8001/files/1001-1001-1001-1001/"
+                                                "http://localhost:8001/files/c690ddf0-9527-11ee-8454-eb9d381d3cc4/"
                                             ],
+                                            "path": "/home/example_user/example_data.csv",
+                                            "regex": ".*\\.csv",
+                                            "stable_time": 60,
+                                            "active": true,
+                                            "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -4782,10 +4824,17 @@
                                 "examples": {
                                     "ValidExample": {
                                         "value": {
-                                            "url": "http://localhost:8001/monitored_paths/1/",
+                                            "url": "http://localhost:8001/monitored_paths/172f2460-9528-11ee-8454-eb9d381d3cc4/",
+                                            "uuid": "172f2460-9528-11ee-8454-eb9d381d3cc4",
                                             "files": [
-                                                "http://localhost:8001/files/1001-1001-1001-1001/"
+                                                "http://localhost:8001/files/c690ddf0-9527-11ee-8454-eb9d381d3cc4/"
                                             ],
+                                            "path": "/home/example_user/example_data.csv",
+                                            "regex": ".*\\.csv",
+                                            "stable_time": 60,
+                                            "active": true,
+                                            "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
+                                            "team": "http://localhost:8001/teams/1/",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -6381,8 +6430,10 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/tokens/1/",
+                                                    "id": 1,
                                                     "name": "Example Token",
                                                     "created": "2021-08-18T15:23:45.123456Z",
+                                                    "expiry": "2023-08-18T15:23:45.123456Z",
                                                     "permissions": {
                                                         "create": false,
                                                         "destroy": false,
@@ -6445,8 +6496,10 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/tokens/1/",
+                                            "id": 1,
                                             "name": "Example Token",
                                             "created": "2021-08-18T15:23:45.123456Z",
+                                            "expiry": "2023-08-18T15:23:45.123456Z",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -6524,8 +6577,10 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/tokens/1/",
+                                            "id": 1,
                                             "name": "Example Token",
                                             "created": "2021-08-18T15:23:45.123456Z",
+                                            "expiry": "2023-08-18T15:23:45.123456Z",
                                             "permissions": {
                                                 "create": false,
                                                 "destroy": false,
@@ -6754,9 +6809,9 @@
                                             "results": [
                                                 {
                                                     "username": "admin",
-                                                    "email": "",
-                                                    "first_name": "",
-                                                    "last_name": "",
+                                                    "email": "admin@galv.ox",
+                                                    "first_name": "Adam",
+                                                    "last_name": "Minotaur",
                                                     "url": "http://localhost:8001/users/1/",
                                                     "id": 1,
                                                     "is_staff": true,
@@ -6832,9 +6887,9 @@
                                     "ValidExample": {
                                         "value": {
                                             "username": "admin",
-                                            "email": "",
-                                            "first_name": "",
-                                            "last_name": "",
+                                            "email": "admin@galv.ox",
+                                            "first_name": "Adam",
+                                            "last_name": "Minotaur",
                                             "url": "http://localhost:8001/users/1/",
                                             "id": 1,
                                             "is_staff": true,
@@ -6901,9 +6956,9 @@
                                     "ValidExample": {
                                         "value": {
                                             "username": "admin",
-                                            "email": "",
-                                            "first_name": "",
-                                            "last_name": "",
+                                            "email": "admin@galv.ox",
+                                            "first_name": "Adam",
+                                            "last_name": "Minotaur",
                                             "url": "http://localhost:8001/users/1/",
                                             "id": 1,
                                             "is_staff": true,
@@ -6988,9 +7043,9 @@
                                     "ValidExample": {
                                         "value": {
                                             "username": "admin",
-                                            "email": "",
-                                            "first_name": "",
-                                            "last_name": "",
+                                            "email": "admin@galv.ox",
+                                            "first_name": "Adam",
+                                            "last_name": "Minotaur",
                                             "url": "http://localhost:8001/users/1/",
                                             "id": 1,
                                             "is_staff": true,
@@ -7092,7 +7147,7 @@
                                             "results": [
                                                 {
                                                     "url": "http://localhost:8001/validation_schemas/1/",
-                                                    "uuid": "4321-4321-4321-4321",
+                                                    "uuid": "df383510-9527-11ee-8454-eb9d381d3cc4",
                                                     "name": "Example Validation Schema",
                                                     "schema": {
                                                         "type": "object",
@@ -7172,7 +7227,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "4321-4321-4321-4321",
+                                            "uuid": "df383510-9527-11ee-8454-eb9d381d3cc4",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7244,7 +7299,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "4321-4321-4321-4321",
+                                            "uuid": "df383510-9527-11ee-8454-eb9d381d3cc4",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7334,7 +7389,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "4321-4321-4321-4321",
+                                            "uuid": "df383510-9527-11ee-8454-eb9d381d3cc4",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7423,7 +7478,7 @@
                                     "ValidExample": {
                                         "value": {
                                             "url": "http://localhost:8001/validation_schemas/1/",
-                                            "uuid": "4321-4321-4321-4321",
+                                            "uuid": "df383510-9527-11ee-8454-eb9d381d3cc4",
                                             "name": "Example Validation Schema",
                                             "schema": {
                                                 "type": "object",
@@ -7869,7 +7924,10 @@
                         "description": "Schedule this Cycler Test uses"
                     },
                     "rendered_schedule": {
-                        "type": "string",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
                         "nullable": true,
                         "readOnly": true,
                         "description": "Rendered schedule"
