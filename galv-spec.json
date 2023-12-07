@@ -2903,7 +2903,9 @@
                                                     "authors": [
                                                         "http://localhost:8001/userproxies/1/"
                                                     ],
-                                                    "protocol": "http://localhost:8001/validation_schemas/1/",
+                                                    "protocol": {
+                                                        "detail": "JSON representation of experiment protocol"
+                                                    },
                                                     "protocol_file": null,
                                                     "cycler_tests": [
                                                         "http://localhost:8001/cycler_tests/2b7313c9-94c2-4276-a4ee-e9d58d8a641b/"
@@ -2983,7 +2985,9 @@
                                             "authors": [
                                                 "http://localhost:8001/userproxies/1/"
                                             ],
-                                            "protocol": "http://localhost:8001/validation_schemas/1/",
+                                            "protocol": {
+                                                "detail": "JSON representation of experiment protocol"
+                                            },
                                             "protocol_file": null,
                                             "cycler_tests": [
                                                 "http://localhost:8001/cycler_tests/2b7313c9-94c2-4276-a4ee-e9d58d8a641b/"
@@ -3055,7 +3059,9 @@
                                             "authors": [
                                                 "http://localhost:8001/userproxies/1/"
                                             ],
-                                            "protocol": "http://localhost:8001/validation_schemas/1/",
+                                            "protocol": {
+                                                "detail": "JSON representation of experiment protocol"
+                                            },
                                             "protocol_file": null,
                                             "cycler_tests": [
                                                 "http://localhost:8001/cycler_tests/2b7313c9-94c2-4276-a4ee-e9d58d8a641b/"
@@ -3143,7 +3149,9 @@
                                             "authors": [
                                                 "http://localhost:8001/userproxies/1/"
                                             ],
-                                            "protocol": "http://localhost:8001/validation_schemas/1/",
+                                            "protocol": {
+                                                "detail": "JSON representation of experiment protocol"
+                                            },
                                             "protocol_file": null,
                                             "cycler_tests": [
                                                 "http://localhost:8001/cycler_tests/2b7313c9-94c2-4276-a4ee-e9d58d8a641b/"
@@ -3259,6 +3267,18 @@
                                                     "url": "http://localhost:8001/observed_files/1/",
                                                     "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                                     "path": "/home/example_user/example_data.csv",
+                                                    "name": "example_data.csv",
+                                                    "state": "IMPORTED",
+                                                    "parser": "Biologic",
+                                                    "num_rows": 100,
+                                                    "first_sample_no": 1,
+                                                    "last_sample_no": 100,
+                                                    "extra_metadata": {},
+                                                    "has_required_columns": true,
+                                                    "last_observed_time": "2021-08-18T15:23:45.123456Z",
+                                                    "last_observed_size": 123456,
+                                                    "upload_errors": [],
+                                                    "upload_info": {},
                                                     "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
                                                     "columns": [
                                                         "http://localhost:8001/columns/1/",
@@ -3331,6 +3351,18 @@
                                             "url": "http://localhost:8001/observed_files/1/",
                                             "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                             "path": "/home/example_user/example_data.csv",
+                                            "name": "example_data.csv",
+                                            "state": "IMPORTED",
+                                            "parser": "Biologic",
+                                            "num_rows": 100,
+                                            "first_sample_no": 1,
+                                            "last_sample_no": 100,
+                                            "extra_metadata": {},
+                                            "has_required_columns": true,
+                                            "last_observed_time": "2021-08-18T15:23:45.123456Z",
+                                            "last_observed_size": 123456,
+                                            "upload_errors": [],
+                                            "upload_info": {},
                                             "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
                                             "columns": [
                                                 "http://localhost:8001/columns/1/",
@@ -3398,6 +3430,18 @@
                                             "url": "http://localhost:8001/observed_files/1/",
                                             "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                             "path": "/home/example_user/example_data.csv",
+                                            "name": "example_data.csv",
+                                            "state": "IMPORTED",
+                                            "parser": "Biologic",
+                                            "num_rows": 100,
+                                            "first_sample_no": 1,
+                                            "last_sample_no": 100,
+                                            "extra_metadata": {},
+                                            "has_required_columns": true,
+                                            "last_observed_time": "2021-08-18T15:23:45.123456Z",
+                                            "last_observed_size": 123456,
+                                            "upload_errors": [],
+                                            "upload_info": {},
                                             "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
                                             "columns": [
                                                 "http://localhost:8001/columns/1/",
@@ -3468,6 +3512,18 @@
                                             "url": "http://localhost:8001/observed_files/1/",
                                             "uuid": "c690ddf0-9527-11ee-8454-eb9d381d3cc4",
                                             "path": "/home/example_user/example_data.csv",
+                                            "name": "example_data.csv",
+                                            "state": "IMPORTED",
+                                            "parser": "Biologic",
+                                            "num_rows": 100,
+                                            "first_sample_no": 1,
+                                            "last_sample_no": 100,
+                                            "extra_metadata": {},
+                                            "has_required_columns": true,
+                                            "last_observed_time": "2021-08-18T15:23:45.123456Z",
+                                            "last_observed_size": 123456,
+                                            "upload_errors": [],
+                                            "upload_info": {},
                                             "harvester": "http://localhost:8001/harvesters/d8290e68-bfbb-3bc8-b621-5a9590aa29fd/",
                                             "columns": [
                                                 "http://localhost:8001/columns/1/",
