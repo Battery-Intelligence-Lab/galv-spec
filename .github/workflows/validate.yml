@@ -1,6 +1,8 @@
 name: Validate
 on:
   push:
+    paths:
+      - 'galv-spec.json'
   workflow_dispatch:
     inputs:
       debug_enabled:

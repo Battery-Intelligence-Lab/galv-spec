@@ -5,7 +5,7 @@ on:
   # Run when Docs workflow completes
   push:
     branches:
-      - v*.*.*
+      - releases/**
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
