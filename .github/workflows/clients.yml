@@ -77,7 +77,10 @@ jobs:
           # Delete the ref to avoid keeping history.
           git update-ref -d refs/heads/api-clients
           rm -rf *
-          mv ../* .
+          mv ../clients .
+          mv ../galv-spec.json .
+          mv ../LICENSE .
+          mv ../README.md .
           git add .
           git commit -m "Deploy $GITHUB_SHA to api-clients"
           git push --set-upstream origin api-clients --force
