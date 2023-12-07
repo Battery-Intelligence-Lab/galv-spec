@@ -68,7 +68,7 @@ jobs:
           unzip -t clients/galv-client-typescript-axios.zip
 
       - name: Push to api-clients branch
-        if: (github.ref_name == 'main' && github.event_name == 'push') || inputs.save_output
+        if: (github.ref_name == 'main' && github.event_name == 'workflow_run') || inputs.save_output
         run: |
           git worktree add api-clients
           git config user.name "Deploy from CI"
@@ -81,3 +81,8 @@ jobs:
           git add .
           git commit -m "Deploy $GITHUB_SHA to api-clients"
           git push --set-upstream origin api-clients --force
+
+      - name: Explain skip
+        if: (github.ref_name != 'main' || github.event_name != 'workflow_run') && !inputs.save_output
+        run: |
+          echo "Skipping push to api-clients branch because ${{ github.ref_name }} != 'main' or ${{ github.event_name }} != 'workflow_run' and inputs.save_output is ${{ inputs.save_output }}"
