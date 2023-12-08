@@ -5,7 +5,7 @@ on:
   # Run when Docs workflow completes
   push:
     branches:
-      - v*.*.*
+      - release/*
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,10 +22,11 @@ jobs:
           ref: 'api-clients'
 
       - name: Release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v1
         with:
-          tag: github.ref_name
+          tag_name: "${{ github.ref_name }}"
           body: "Release ${{ github.ref_name }}."
-          artifacts: "galv-spec.json,clients/*"
-          commit: github.ref_name
-          artifactErrorsFailBuild: true
+          files: |
+            galv-spec.json
+            clients/*
+          target_commitish: "${{ github.ref_name }}"
