@@ -21,15 +21,46 @@ An example frontend view is displayed below.
 
 ## Specification
 
-Galv is built on a REST API specification.
+The role of the Galv specification is to define the REST API and the data model.
 
-The schema can be downloaded from the [documentation page](https://Battery-Intelligence-Lab.github.io/galv-spec/UserGuide.html#api-spec). 
-If you run your own instance of Galv, it will make its own schema available at `/schema/`, 
-and provide Swagger-UI and ReDoc documentation at `/schema/swagger-ui/` and `/schema/redoc/` respectively.
+The specification is in OpenAPI 3.0 format and is located at [galv-spec.json](galv-spec.json).
+
+### Uses of the specification
+
+There are three main uses of the specification:
+1. To describe the REST API
+2. To generate clients for the REST API
+3. To generate mock servers for testing
+
+#### 1. REST API
+
+The specification is used to describe the REST API.
+When the Galv REST API is updated, the specification should be updated to reflect the changes.
+Breaking changes should be avoided, but if they are necessary, the version number should be updated.
+Non-breaking changes should be reflected in the minor version number.
+
+The specification is also used to generate documentation for the REST API, 
+and to verify responses produced during testing conform to the specification.
+
+#### 2. Clients
+
+This specification can be used to generate clients in different languages using the [OpenAPI Generator](https://openapi-generator.tech/).
+Each release comes with clients for Python and Typescript (axios).
+The Glav frontend React app uses the Typescript client.
+
+#### 3. Mock servers
+
+The specification can be used to generate mock servers for testing.
+When testing and developing the Galv frontend, a mock server is used to simulate the Galv REST API.
+
+## Galv architecture
 
 The below diagram presents an overview of Galv's architecture. 
 The arrows indicate the direction of data flow.
 
 <p align="center">
-    <img src="docs/source/img/GalvStructure.PNG" alt="Data flows from battery cycling machines to Galv Harvesters, then to the     Galv server and REST API. Metadata can be updated and data read using the web client, and data can be downloaded by the Python client." width="600" />
+    <img src="img/GalvStructure.PNG" alt="Data flows from battery cycling machines to Galv Harvesters, then to the     Galv server and REST API. Metadata can be updated and data read using the web client, and data can be downloaded by the Python client." width="600" />
 </p>
+
+If you run your own instance of Galv, it will make its own schema available at `/schema/`,
+and provide Swagger-UI and ReDoc documentation at `/schema/swagger-ui/` and `/schema/redoc/` respectively.
