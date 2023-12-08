@@ -1,12 +1,12 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Create Release
+name: Create release
 
 on:
   # Run when Docs workflow completes
   workflow_run:
     branches:
       - main
-    workflows: [Clients]
+    workflows: [Create API clients]
     types:
       - completed
 
