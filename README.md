@@ -1,6 +1,8 @@
 # Galv
 
 [![GitHub Super-Linter](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/validate.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![Clients](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/clients.yml/badge.svg)](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/clients.yml)
+[![Create Release](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/create-release.yml/badge.svg)](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/create-release.yml)
 
 Galv is an open-source platform for automated storage of battery data with advanced metadata support for battery scientists. 
 Galv is deployed with [Docker](https://docs.docker.com/) to support robust local and cloud instances. 
