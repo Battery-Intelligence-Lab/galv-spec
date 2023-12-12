@@ -1,23 +1,20 @@
 # Galv
+> A metadata secretary for battery science
 
 [![Validate specification](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/validate.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Create API clients](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/clients.yml/badge.svg)](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/clients.yml)
 [![Create release](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/create-release.yml/badge.svg)](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/create-release.yml)
 
-Galv is an open-source platform for automated storage of battery data with advanced metadata support for battery scientists. 
-Galv is deployed with [Docker](https://docs.docker.com/) to support robust local and cloud instances. 
-An example frontend view is displayed below. 
+## Overview
 
-<p align="center">
-<img src="img/galv_frontend_v1.png" width="900" />
-</p>
+Galv is a metadata secretary for battery science. 
+This specification defines the Galv REST API that is used to store and retrieve battery data and metadata.
+Code for the Galv REST API is available in the [galv-backend](/Battery-Intelligence-Lab/galv-backend) repository.
 
-## Features:
-- REST API for easy data storage and retrieval
-- A Python, Julia, and MATLAB client for the REST API
-- Metadata support using ontology definitions from BattINFO/EMMO
-- A distributed platform with local data harvesters
-- Docker based deployment
+Although the specification is generated from the backend code, it does not become the 'source of truth' for the API
+until it is released in this repository. 
+This approach enables us to develop the backend and frontend in parallel,
+while ensuring that the frontend is always compatible with the backend.
 
 ## Specification
 
@@ -53,6 +50,19 @@ The Glav frontend React app uses the Typescript client.
 The specification can be used to generate mock servers for testing.
 When testing and developing the Galv frontend, a mock server is used to simulate the Galv REST API.
 
+## GitHub Actions
+
+This repository uses a GitHub action queue to issue new releases from updates to the specification.
+These actions occur when changes are made to the `galv-spec.json` file.
+
+The actions are:
+1. Validate the specification
+2. Generate clients in Python and Typescript (axios)
+3. Create a release branch tagged with the version number
+4. Issue the release on GitHub
+
+The latest release is always available at https://github.com/Battery-Intelligence-Lab/galv-spec/releases/latest.
+
 ## Galv architecture
 
 The below diagram presents an overview of Galv's architecture. 
@@ -64,3 +74,10 @@ The arrows indicate the direction of data flow.
 
 If you run your own instance of Galv, it will make its own schema available at `/schema/`,
 and provide Swagger-UI and ReDoc documentation at `/schema/swagger-ui/` and `/schema/redoc/` respectively.
+
+## Galv project features
+- REST API for easy data storage and retrieval
+- A Python, Julia, and MATLAB client for the REST API
+- Metadata support using ontology definitions from BattINFO/EMMO
+- A distributed platform with local data harvesters
+- Docker based deployment
