@@ -27,6 +27,7 @@ on:
 jobs:
   sphinx-build:
     runs-on: ubuntu-latest
+    steps:
       # Enable tmate debugging of manually-triggered workflows if the input option was provided
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
