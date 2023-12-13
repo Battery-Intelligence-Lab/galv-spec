@@ -4,6 +4,14 @@
 [![Validate specification](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/validate.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Create API clients](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/clients.yml/badge.svg)](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/clients.yml)
 [![Create release](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/create-release.yml/badge.svg)](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/create-release.yml)
+[![Sphinx build](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/docs.yml/badge.svg)](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/docs.yml)
+[![Docs website](https://github.com/Battery-Intelligence-Lab/galv-spec/actions/workflows/gh-pages.yml/badge.svg)](https://Battery-Intelligence-Lab.github.io/galv-spec/)
+
+## Galv Project
+- [**Specification**](/Battery-Intelligence-Lab/galv-spec)
+- [Backend](/Battery-Intelligence-Lab/galv-backend)
+- [Frontend](/Battery-Intelligence-Lab/galv-frontend)
+- [Harvester](/Battery-Intelligence-Lab/galv-harvester)
 
 ## Overview
 
