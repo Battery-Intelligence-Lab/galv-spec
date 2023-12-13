@@ -1,0 +1,84 @@
+# Generate documentation
+# If file gets unweildy with just one job, could refactor to use outputs:
+# https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs
+
+# This name is referenced by gh-pages.yml workflow. Update there if this changes.
+name: Sphinx build
+on:
+  push:
+    paths:
+      - 'docs/**'
+  workflow_dispatch:
+    inputs:
+      deploy_docs:
+        type: boolean
+        description: 'Run the deploy-to-gh-pages step'
+        required: false
+        default: false
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
+
+permissions:
+  id-token: write
+  contents: write
+  pages: write
+
+jobs:
+  sphinx-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Sphinx
+        run: sudo pip install sphinx
+
+      # Enable tmate debugging of manually-triggered workflows if the input option was provided
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+
+      - name: Sphinx build
+        run: |
+          cd docs
+          make html
+
+      - name: Push to gh-pages branch
+        if: (github.ref_name == 'main' && github.event_name == 'push') || inputs.deploy_docs
+        run: |
+          git worktree add gh-pages
+          git config user.name "Deploy from CI"
+          git config user.email ""
+          cd gh-pages
+          # Delete the ref to avoid keeping history.
+          git update-ref -d refs/heads/gh-pages
+          rm -rf *
+          mv ../docs/build/html/* .
+          git add .
+          git commit -m "Deploy $GITHUB_SHA to gh-pages"
+          git push --set-upstream origin gh-pages --force
+
+  deploy:
+    if: (github.ref_name == 'main' && github.event_name == 'push') || inputs.deploy_docs
+    needs: sphinx-build
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: 'gh-pages'
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
