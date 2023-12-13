@@ -46,9 +46,6 @@ jobs:
 
       - name: Push to gh-pages branch
         if: (github.ref_name == 'main' && github.event_name == 'push') || inputs.deploy_docs
-        env:
-          # Required so that pushing to gh-pages branch triggers the gh-pages.yml workflow
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
         run: |
           git worktree add gh-pages
           git config user.name "Deploy from CI"
