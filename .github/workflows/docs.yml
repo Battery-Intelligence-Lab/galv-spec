@@ -6,11 +6,8 @@
 name: Sphinx build
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - '**'
+    paths:
+      - 'docs/**'
   workflow_dispatch:
     inputs:
       deploy_docs:
@@ -28,6 +25,9 @@ jobs:
   sphinx-build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       # Enable tmate debugging of manually-triggered workflows if the input option was provided
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
